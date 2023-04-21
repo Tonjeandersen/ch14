@@ -15,10 +15,10 @@ application = Flask(__name__)
 # application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
 ### Code computer
-# application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
-# DBVAR="postgresql://username:password@host:port/database"
-# application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
-# application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
+application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
+DBVAR="postgresql://pssasqtwhdaqih:3cb955b66439692892ac9c9de78d79ca578e37f0ec82373e82aa6cf52fa0d26b@ec2-34-242-154-118.eu-west-1.compute.amazonaws.com:5432/dbe1is97pj69kk"
+application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
+application.config['SQLALCHEMY_BINDS'] ={'transport': DBVAR}
 
 db = SQLAlchemy(application)
 bcrypt = Bcrypt(application)
